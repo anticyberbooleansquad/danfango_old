@@ -11,5 +11,11 @@ package Services;
  * @author Konrad Juszkiewicz <kjuszkiewicz95 at gmail.com>
  */
 public class AuthenticationService {
-    public AuthenticationService(){}
+    public AuthenticationService(){
+    
+    }
+    
+    public boolean authenticate(String email, String password){
+        return true;
+    }
 }

@@ -11,5 +11,11 @@ package Services;
  * @author Konrad Juszkiewicz <kjuszkiewicz95 at gmail.com>
  */
 public class MemberService {
-    public MemberService(){}
+    public MemberService(){
+    
+    }
+    
+//    public User getUserByEmail(String email){
+//        return new User();
+//    }
 }
