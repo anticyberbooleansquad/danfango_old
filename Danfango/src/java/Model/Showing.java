@@ -5,10 +5,60 @@
  */
 package Model;
 
+import Model.Ticket.TicketType;
+import java.sql.Time;
+import java.util.HashMap;
+
 /**
  *
  * @author johnlegutko
  */
 public class Showing {
-    
+
+    private Long id;
+    private Time time;
+    private Movie movie;
+    private TheatreRoom theatreRoom;
+    private HashMap<TicketType, Double> priceInfo;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Time getTime() {
+        return time;
+    }
+
+    public void setTime(Time time) {
+        this.time = time;
+    }
+
+    public Movie getMovie() {
+        return movie;
+    }
+
+    public void setMovie(Movie movie) {
+        this.movie = movie;
+    }
+
+    public TheatreRoom getTheatreRoom() {
+        return theatreRoom;
+    }
+
+    public void setTheatreRoom(TheatreRoom theatreRoom) {
+        this.theatreRoom = theatreRoom;
+    }
+
+    public HashMap<TicketType, Double> getPriceInfo() {
+        return priceInfo;
+    }
+
+    public void setPriceInfo(HashMap<TicketType, Double> priceInfo) {
+        this.priceInfo = priceInfo;
+    }
+
 }

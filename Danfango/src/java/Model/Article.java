@@ -5,10 +5,79 @@
  */
 package Model;
 
+import java.util.Date;
+
 /**
  *
  * @author johnlegutko
  */
 public class Article {
+    
+    private Long id;
+    private String title;
+    private String movieName;
+    private Long movieID;
+    private Date publishDate;
+    private Long agencyID;
+    private Long agencyArticleID;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getMovieName() {
+        return movieName;
+    }
+
+    public void setMovieName(String movieName) {
+        this.movieName = movieName;
+    }
+
+    public Long getMovieID() {
+        return movieID;
+    }
+
+    public void setMovieID(Long movieID) {
+        this.movieID = movieID;
+    }
+
+    public Date getPublishDate() {
+        return publishDate;
+    }
+
+    public void setPublishDate(Date publishDate) {
+        this.publishDate = publishDate;
+    }
+
+    public Long getAgencyID() {
+        return agencyID;
+    }
+
+    public void setAgencyID(Long agencyID) {
+        this.agencyID = agencyID;
+    }
+
+    public Long getAgencyArticleID() {
+        return agencyArticleID;
+    }
+
+    public void setAgencyArticleID(Long agencyArticleID) {
+        this.agencyArticleID = agencyArticleID;
+    }
+    
+    
+    
     
 }
