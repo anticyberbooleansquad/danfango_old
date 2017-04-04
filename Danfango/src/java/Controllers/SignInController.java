@@ -4,6 +4,8 @@ package Controllers;
  *
  * @author joeg332
  */
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,11 +22,11 @@ public class SignInController{
         return modelandview;
     }
     @RequestMapping(value = "/submitCredentials", method = RequestMethod.POST)
-    protected ModelAndView submitCredentials(@RequestParam("email") String email, @RequestParam("password") String password){
-    
+    protected ModelAndView submitCredentials(@RequestParam("email") String email, @RequestParam("password") String password,  HttpServletRequest request){
+        ServletContext sc = request.getServletContext();
         ModelAndView modelandview = new ModelAndView("submitCredentials");
-        modelandview.addObject("credentials", "email: "+email+ "   Password: "+password );
-
+        // modelandview.addObject("credentials", "email: "+email+ "   Password: "+password );
+        
         return modelandview;
     }
 }
