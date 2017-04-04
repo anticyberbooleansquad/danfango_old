@@ -1,0 +1,159 @@
+.sidepadding{
+
+	padding-right: 100px;
+	padding-left: 100px;
+}
+
+.toppadding{
+
+	padding-top: 40px;
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    display: block;
+    max-width: 100%;
+    height: 35em;
+}
+
+.navbar-right{
+	margin-right: -60px;
+}
+
+.reviewplaceholder{
+
+	width: 500px;
+	height: 200px;
+	border: solid black;
+	background-color: white;
+	text-align: center;
+	padding-top: 30px;
+}
+
+.synopsisplaceholder{
+
+	border: solid black;
+	background-color: white;
+	text-align: center;
+	padding-top: 30px;
+	width: 100%;
+	height: 100%;
+}
+
+.theatreplaceholder{
+
+	border: solid gray;
+	background-color: white;
+	width: 100%;
+	height: 100%;
+}
+
+
+.genretable{
+	 width: 50%;
+}
+
+.spacing{
+	padding: 10px;
+}
+
+.border{
+	border: solid gray;
+}
+
+.movieposter{
+
+	width: 100%;
+	height: 100%;
+}
+
+.movietitle{
+	font-size: 40px;
+}
+
+.accountfont{
+	font-size: 30px;
+}
+
+.itemcenter{
+	display: block;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.joinbutton{
+	width: 100%;
+	text-align: center;
+}
+
+.signupform{
+	width: 100%;
+}
+
+.modal-dialog{
+
+	z-index: 5000;
+}
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
+
+#buyticketbutton{
+
+	border: 3px solid #444;
+	padding: 20px;
+	width: 100%;
+	text-align: center;
+	font-size: 15px;
+}
+
+#leavereviewbutton{
+
+	border: 3px solid #444;
+	padding: 20px;
+	width: 50%;
+	text-align: center;
+	font-size: 15px;
+}
+
+
+
+#danfangologo{
+
+	padding: 10px;
+}
+
+#moviesheader{
+
+	font-size: 40px;
+}
+
+#navbarfont{
+
+	font-size: 100px;
+}
+
+#container{
+	background-color: lightgray;
+}
+
+#navbottom{
+    border-bottom-color: black;
+    border-bottom-width: medium;
+}
+
+#search{
+	width: 25%;
+}
+
