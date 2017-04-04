@@ -1,4 +1,4 @@
-package com.danfango;
+package Controllers;
 
 /**
  *
@@ -9,14 +9,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class TestController{
+public class HomeController{
     
-    @RequestMapping("/test")
+    @RequestMapping("/index")
     protected ModelAndView staticPage(){
     
-        ModelAndView modelandview = new ModelAndView("test");
-        modelandview.addObject("welcomeMessage","this is a successful test");
-        
+        ModelAndView modelandview = new ModelAndView("index");        
         return modelandview;
     }
 }
