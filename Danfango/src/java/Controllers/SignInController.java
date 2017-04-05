@@ -34,7 +34,7 @@ public class SignInController{
         authenticationService = (AuthenticationService)sc.getAttribute("authenticationService");
         memberService = (MemberService)sc.getAttribute("memberService");
         
-       //boolean authenticated = authenticationService.authenticate(email, password);
+       boolean authenticated = authenticationService.authenticate(email, password);
 //        User user = memberService.getUserByEmail(email);
 //        
 //        if(authenticated){
