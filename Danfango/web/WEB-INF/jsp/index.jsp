@@ -92,6 +92,7 @@
                                             <li><a href="/Danfango/signinpage.html">Sign-Out</a>
                                             </li>
                                         </c:if>
+                                            
 
                                         <c:if test="${isloggedin == 0}">
                                             <li><a href="/Danfango/signuppage.html">Join Now</a>
