@@ -8,24 +8,28 @@ package Model;
 import Model.Ticket.TicketType;
 import java.sql.Time;
 import java.util.HashMap;
+import javax.persistence.*;
 
 /**
  *
  * @author johnlegutko
  */
+@Entity
 public class Showing {
-
-    private Long id;
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
     private Time time;
     private Movie movie;
     private TheatreRoom theatreRoom;
     private HashMap<TicketType, Double> priceInfo;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

@@ -29,10 +29,12 @@
           p:prefix="/WEB-INF/jsp/"
           p:suffix=".jsp" />
     
-    
+   
     <mvc:resources mapping="/resources/**" location="/resources/css" />
     <mvc:annotation-driven />
     
+    <mvc:view-controller path="/" view-name="index"/>
+
     
 <!--    <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
 

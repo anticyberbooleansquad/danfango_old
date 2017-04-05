@@ -16,12 +16,13 @@
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
-<session-config>
+
+    <!--<session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>Danfango/index</welcome-file>
-    </welcome-file-list>
+        <welcome-file></welcome-file>
+    </welcome-file-list>-->
 </web-app>
