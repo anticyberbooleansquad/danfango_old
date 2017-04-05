@@ -6,14 +6,18 @@
 package Model;
 
 import java.util.Date;
+import javax.persistence.*;
 
 /**
  *
  * @author johnlegutko
  */
+@Entity
 public class Article {
     
-    private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
     private String title;
     private String movieName;
     private Long movieID;
@@ -21,11 +25,11 @@ public class Article {
     private Long agencyID;
     private Long agencyArticleID;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

@@ -6,13 +6,17 @@
 package Model;
 
 import java.sql.Timestamp;
+import javax.persistence.*;
 /**
  *
- * @author charles
+ * @author johnlegutko
  */
+@Entity
 public class Movie {
-
-    private int id;
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
     private int agencyId;
     private int agencyMovieId;
     private String title;
@@ -23,14 +27,14 @@ public class Movie {
     /**
      * @return the id
      */
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
     /**
      * @param id the id to set
      */
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

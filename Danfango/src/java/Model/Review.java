@@ -5,13 +5,17 @@
  */
 package Model;
 
+import javax.persistence.*;
 /**
  *
  * @author johnlegutko
  */
+@Entity
 public class Review {
     
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
     private Movie movie;
     private String title;
     private String content;
@@ -19,14 +23,14 @@ public class Review {
     /**
      * @return the id
      */
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
     /**
      * @param id the id to set
      */
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

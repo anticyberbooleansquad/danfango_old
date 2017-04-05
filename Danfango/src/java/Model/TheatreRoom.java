@@ -6,27 +6,29 @@
 package Model;
 
 import java.util.ArrayList;
-
+import javax.persistence.*;
 /**
  *
  * @author johnlegutko
  */
+@Entity
 public class TheatreRoom {
     
     public enum SeatingType {Reserved, Nonreserved}
     
-    
-    private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
     private ArrayList<Seat> seats;
     private SeatingType seatingType;
     private int totalSeats;
     private int totalSeatsRemaining;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
