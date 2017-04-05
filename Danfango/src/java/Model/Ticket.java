@@ -5,25 +5,30 @@
  */
 package Model;
 
+import javax.persistence.*;
+
 /**
  *
  * @author johnlegutko
  */
+@Entity
 public class Ticket {
     
     public enum TicketType {Child, Adult, Senior, Veteran};
 
-    private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
     private double price;
     private TicketType ticketType;
     private Seat seat;
     private Showing showing;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

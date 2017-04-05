@@ -5,13 +5,18 @@
  */
 package Model;
 
+import javax.persistence.*;
+
 /**
  *
  * @author johnlegutko
  */
+@Entity
 public class User {
     
-    private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
     private String firstName;
     private String lastName;
     private String password;
@@ -20,14 +25,14 @@ public class User {
     /**
      * @return the id
      */
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
     /**
      * @param id the id to set
      */
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

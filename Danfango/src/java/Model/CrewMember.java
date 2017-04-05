@@ -6,13 +6,17 @@
 package Model;
 
 import java.sql.Date;
+import javax.persistence.*;
 /**
  *
  * @author johnlegutko
  */
+@Entity
 public class CrewMember {
     
-    private int crewMemberId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
     private Agency agency;
     private int agencyCrewId;
     private String firstName;
@@ -22,17 +26,17 @@ public class CrewMember {
     private Date dob;
 
     /**
-     * @return the crewMemberId
+     * @return the id
      */
-    public int getCrewMemberId() {
-        return crewMemberId;
+    public int getId() {
+        return id;
     }
 
     /**
-     * @param crewMemberId the crewMemberId to set
+     * @param id the crewMemberId to set
      */
-    public void setCrewMemberId(int crewMemberId) {
-        this.crewMemberId = crewMemberId;
+    public void setId(int id) {
+        this.id = id;
     }
 
     /**
