@@ -27,7 +27,6 @@ public class AuthenticationService {
         try{
             MessageDigest md = MessageDigest.getInstance("SHA-256");
             md.update(password.getBytes());
-            System.out.println("hashed value = "+Arrays.toString(password.getBytes()));
             return md.digest();
         } catch(Exception ex){
             throw new RuntimeException(ex);

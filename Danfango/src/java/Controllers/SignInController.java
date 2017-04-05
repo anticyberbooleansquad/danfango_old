@@ -36,13 +36,13 @@ public class SignInController{
         memberService = (MemberService)sc.getAttribute("memberService");
       
        boolean authenticated = authenticationService.authenticate(email, password);
-//        User user = memberService.getUserByEmail(email);
+        User user = memberService.getUserByEmail(email);
 //        
-//        if(authenticated){
-//            // create session 
-//            HttpSession session = request.getSession();
-//            // session.setAttribute("user", user);
-//        }
+        if(authenticated){
+            // create session 
+            HttpSession session = request.getSession();
+             session.setAttribute("user", user);
+        }
         
         ModelAndView modelandview = new ModelAndView("index");
         
