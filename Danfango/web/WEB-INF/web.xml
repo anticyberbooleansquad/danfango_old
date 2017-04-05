@@ -5,7 +5,7 @@
         <param-value>/WEB-INF/applicationContext.xml</param-value>
     </context-param>
     <listener>
-<!--        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>-->
+        <!--        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>-->
         <listener-class>Configuration.MyServletContextListener</listener-class>
     </listener>
     <servlet>
@@ -22,9 +22,8 @@
             30
         </session-timeout>
     </session-config>-->
-<!--        <welcome-file-list>
-        <welcome-file>test.html</welcome-file>
-        <welcome-file>redirect.jsp</welcome-file>
-    </welcome-file-list>-->
+    <welcome-file-list>
+        <welcome-file></welcome-file>
+    </welcome-file-list>
     
 </web-app>
