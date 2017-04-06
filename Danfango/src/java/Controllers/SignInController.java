@@ -31,7 +31,7 @@ public class SignInController{
         return modelandview;
     }
     
-    @RequestMapping(value = "/submitCredentials", method = RequestMethod.POST)
+    @RequestMapping(value = "/index", method = RequestMethod.POST)
     protected ModelAndView submitCredentials(@RequestParam("email") String email, @RequestParam("password") String password, HttpServletRequest request , HttpServletRequest response){
         ServletContext sc = request.getServletContext();
         authenticationService = (AuthenticationService)sc.getAttribute("authenticationService");
