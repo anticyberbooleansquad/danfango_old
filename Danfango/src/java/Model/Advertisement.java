@@ -5,13 +5,16 @@
  */
 package Model;
 
+import javax.persistence.*;
 /**
  *
  * @author johnlegutko
  */
+@Entity
 public class Advertisement {
-    
-    private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
     private Agency agency;
     private Long agencyAdID;
     private String title;
@@ -19,11 +22,11 @@ public class Advertisement {
     private double width;
     private double height;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

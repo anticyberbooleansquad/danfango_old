@@ -5,13 +5,16 @@
  */
 package Model;
 
+import javax.persistence.*;
 /**
  *
  * @author johnlegutko
  */
+@Entity
 public class Agency {
-    
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
     private enum Type{MOVIE, CREW, AD};
     private String username;
     private String email;
@@ -19,14 +22,14 @@ public class Agency {
     /**
      * @return the Id
      */
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
     /**
      * @param id the Id to set
      */
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

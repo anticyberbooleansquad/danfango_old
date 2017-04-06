@@ -5,10 +5,13 @@
  */
 package Model;
 
+import javax.persistence.*;
+
 /**
  *
  * @author johnlegutko
  */
+@Entity
 public class Seat {
     
     private String row;

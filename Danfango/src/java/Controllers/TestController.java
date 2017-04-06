@@ -15,7 +15,7 @@ public class TestController{
     protected ModelAndView staticPage(){
     
         ModelAndView modelandview = new ModelAndView("test");
-        modelandview.addObject("welcomeMessage","this is a successful test");
+        modelandview.addObject("isloggedin","true");
         
         return modelandview;
     }

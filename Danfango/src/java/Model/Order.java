@@ -6,24 +6,27 @@
 package Model;
 
 import java.util.ArrayList;
+import javax.persistence.*;
 
 /**
  *
  * @author johnlegutko
  */
+@Entity
 public class Order {
-    
-    private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
     private User user;
     private double totalPrice;
     private ArrayList<Ticket> tickets;
 
     
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
     
