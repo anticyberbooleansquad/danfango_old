@@ -5,6 +5,7 @@ package Controllers;
  * @author joeg332
  */
 import Model.User;
+import Configuration.MyServletContextListener;
 import Services.AuthenticationService;
 import Services.MemberService;
 import java.util.HashMap;
@@ -36,6 +37,7 @@ public class SignInController{
         ServletContext sc = request.getServletContext();
         authenticationService = (AuthenticationService)sc.getAttribute("authenticationService");
         memberService = (MemberService)sc.getAttribute("memberService");
+
         
        boolean authenticated = authenticationService.authenticate(email, password);
 //        User user = memberService.getUserByEmail(email);

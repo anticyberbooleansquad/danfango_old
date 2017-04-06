@@ -13,6 +13,6 @@
     </head>
     <body>
         <h1>Hello World!</h1>
-        <h2>${welcomeMessage}</h2>
+        <h2>${isloggedin}</h2>
     </body>
 </html>
