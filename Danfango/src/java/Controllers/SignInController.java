@@ -25,7 +25,7 @@ public class SignInController{
     AuthenticationService authenticationService; 
     MemberService memberService;
     
-    @RequestMapping(value = "/signinpage", method = RequestMethod.GET)
+    @RequestMapping(value = "/signinpage")
     protected ModelAndView getSignInPage(){
     
         ModelAndView modelandview = new ModelAndView("signinpage");        
@@ -37,25 +37,23 @@ public class SignInController{
         ServletContext sc = request.getServletContext();
         authenticationService = (AuthenticationService)sc.getAttribute("authenticationService");
         memberService = (MemberService)sc.getAttribute("memberService");
-
         
-       boolean authenticated = authenticationService.authenticate(email, password);
-//        User user = memberService.getUserByEmail(email);
-//        
-//        if(authenticated){
-//            // create session 
-//            HttpSession session = request.getSession();
-//            // session.setAttribute("user", user);
-//        }
-
+        ModelAndView modelandview;
         
- 
-        ModelAndView modelandview = new ModelAndView("index");
+        request.setAttribute("isloggedin", 1);
+        modelandview = new ModelAndView("index");
         
-        
-        
-        // modelandview.addObject("credentials", "email: "+email+ "   Password: "+password );
-        
+//       boolean authenticated = authenticationService.authenticate(email, password);
+//       if(authenticated){
+//           User user = memberService.getUserByEmail(email);
+//           HttpSession session = request.getSession();
+//           session.setAttribute("user", user);
+//           modelandview = new ModelAndView("index");
+//       }
+//       else{
+//           modelandview = new ModelAndView("signinpage");
+//           modelandview.addObject("signinError", "Incorrect credentials entered. Please try again.");
+//       }       
         return modelandview;
     }
 }

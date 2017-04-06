@@ -118,7 +118,7 @@
           <input type="text" name="email" id="email" placeholder="E-mail" required data-error="Please enter your E-mail">
           <div class="help-block with-errors"></div>
         </div>
-
+         <h2>${signinError}</h2>
         <div class="controls">
           <input type="text" name="password" id="password" placeholder="Password" required data-error="Please enter your Password">
           <div class="help-block with-errors"></div>

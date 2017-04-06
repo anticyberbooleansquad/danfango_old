@@ -94,7 +94,7 @@
                                         </c:if>
                                             
 
-                                        <c:if test="${isloggedin == 0}">
+                                        <c:if test="${isloggedin != 1}">
                                             <li><a href="/Danfango/signuppage.html">Join Now</a>
                                             </li>
                                             <li><a href="/Danfango/signinpage.html">Sign-In</a>
