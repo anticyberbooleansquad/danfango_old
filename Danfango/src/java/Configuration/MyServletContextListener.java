@@ -20,15 +20,13 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
  */
 @WebListener
 public class MyServletContextListener implements ServletContextListener{
-    @Autowired
     private AuthenticationService authenticationService;
-    @Autowired
     private MemberService memberService;
   
     @Override
     public void contextInitialized(ServletContextEvent event){
-//        authenticationService = new AuthenticationService();
-//        memberService = new MemberService();
+        authenticationService = new AuthenticationService();
+        memberService = new MemberService();
         
         event.getServletContext().setAttribute("authenticationService", authenticationService);
         event.getServletContext().setAttribute("memberService", memberService);
