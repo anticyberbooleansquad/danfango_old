@@ -19,11 +19,11 @@
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
                 <library dirs="200">
-                    <file>${file.reference.spring-boot-1.2.3.RELEASE.jar}</file>
+                    <file>${file.reference.spring-boot-autoconfigure-1.2.3.RELEASE.jar}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
                 <library dirs="200">
-                    <file>${file.reference.spring-boot-autoconfigure-1.2.3.RELEASE.jar}</file>
+                    <file>${file.reference.spring-boot-1.5.2.RELEASE.jar}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
             </web-module-libraries>
