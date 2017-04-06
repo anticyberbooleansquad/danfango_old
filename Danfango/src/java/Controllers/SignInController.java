@@ -33,20 +33,19 @@ public class SignInController{
         ServletContext sc = request.getServletContext();
         authenticationService = (AuthenticationService)sc.getAttribute("authenticationService");
         memberService = (MemberService)sc.getAttribute("memberService");
+        ModelAndView modelandview;
         
        boolean authenticated = authenticationService.authenticate(email, password);
-//        User user = memberService.getUserByEmail(email);
-//        
-//        if(authenticated){
-//            // create session 
-//            HttpSession session = request.getSession();
-//            // session.setAttribute("user", user);
-//        }
-        
-        ModelAndView modelandview = new ModelAndView("index");
-        
-        // modelandview.addObject("credentials", "email: "+email+ "   Password: "+password );
-        
+       if(authenticated){
+           User user = memberService.getUserByEmail(email);
+           HttpSession session = request.getSession();
+           session.setAttribute("user", user);
+            modelandview = new ModelAndView("index");
+       }
+       else{
+           modelandview = new ModelAndView("signinpage");
+           modelandview.addObject("signinError", "Incorrect credentials entered. Please try again.");
+       }       
         return modelandview;
     }
 }

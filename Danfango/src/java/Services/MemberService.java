@@ -7,11 +7,13 @@
 package Services;
 
 import Model.User;
+import org.springframework.stereotype.Service;
 
 /**
  * 
  * @author Konrad Juszkiewicz <kjuszkiewicz95 at gmail.com>
  */
+@Service
 public class MemberService {
     public MemberService(){
     
@@ -20,4 +22,5 @@ public class MemberService {
     public User getUserByEmail(String email){
         return new User();
     }
+    
 }
