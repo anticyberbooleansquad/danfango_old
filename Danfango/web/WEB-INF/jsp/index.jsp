@@ -89,7 +89,7 @@
                                     <ul class="dropdown">
 
                                         <c:if test="${isloggedin == 1}">
-                                            <li><a href="/Danfango/signinpage.html">Sign-Out</a>
+                                            <li><a href="/Danfango/logout.html">Sign-Out</a>
                                             </li>
                                         </c:if>
                                             
