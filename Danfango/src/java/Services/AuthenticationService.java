@@ -9,6 +9,7 @@ package Services;
 import Model.User;
 import java.security.MessageDigest;
 import java.util.Arrays;
+import javax.servlet.ServletContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,14 +20,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class AuthenticationService {
     @Autowired 
-    private MemberService memberService;
-  
-    public AuthenticationService(){
+    private ServletContext servletContext;
+    MemberService memberService;
     
+    public AuthenticationService(){
+
     }
     
     public boolean authenticate(String email, String password){
         byte[] hashedPassword = hash(password);
+        memberService = (MemberService)servletContext.getAttribute("memberService");
         User user = memberService.getUserByEmail(email);
         if(hashedPassword != null && user.getPassword() != null){
             if(user.getPassword().equals(new String(hashedPassword))){
