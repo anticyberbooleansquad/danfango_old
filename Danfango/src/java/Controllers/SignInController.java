@@ -32,8 +32,8 @@ public class SignInController{
         return modelandview;
     }
     
-    @RequestMapping(value = "/index", method = RequestMethod.POST)
-    protected ModelAndView submitCredentials(@RequestParam("email") String email, @RequestParam("password") String password, HttpServletRequest request , HttpServletRequest response){
+    @RequestMapping(value = "/submitCredentials", method = RequestMethod.POST)
+    protected ModelAndView submitCredentials(@RequestParam("email") String email, @RequestParam("password") String password, HttpServletRequest request){
         ServletContext sc = request.getServletContext();
         authenticationService = (AuthenticationService)sc.getAttribute("authenticationService");
         memberService = (MemberService)sc.getAttribute("memberService");
@@ -54,6 +54,16 @@ public class SignInController{
 //           modelandview = new ModelAndView("signinpage");
 //           modelandview.addObject("signinError", "Incorrect credentials entered. Please try again.");
 //       }       
+        return modelandview;
+    }
+    
+    @RequestMapping(value = "/logout")
+    protected ModelAndView logout(HttpServletRequest request){
+        
+        HttpSession session = request.getSession();
+        session.invalidate();
+        
+        ModelAndView modelandview = new ModelAndView("index");        
         return modelandview;
     }
 }
