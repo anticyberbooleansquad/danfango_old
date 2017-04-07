@@ -172,6 +172,11 @@
     color: red;
 }
 
+.favoriteState{
+    color:red;
+}
+
+
 /*review*/
 .review{
     background-color:#fff;

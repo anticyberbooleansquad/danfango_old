@@ -41,6 +41,8 @@
         <script src="<c:url value="/resources/js/jquery.slicknav.js" />"></script>
         <script src="<c:url value="/resources/js/jquery.themepunch.revolution.min.js" />"></script>
         <script src="<c:url value="/resources/js/jquery.themepunch.tools.min.js" />"></script>
+        <script src="<c:url value="/resources/js/myjs.js"/>"></script>
+
 
         <!--[if IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
         <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -105,11 +107,16 @@
 
             <div class="container">
 
-                <h1 class="spacing movietitle">MOVIE TITLE  <i class="fa fa-heart fa-inverse" aria-hidden="true"></i> </h1>
+                <c:if test="${favoriteState == 1}">
+                    <h1 class="spacing movietitle">MOVIE TITLE  <i id="favorite" class="fa fa-heart fa-inverse favoriteState" aria-hidden="true"></i> </h1>
+                </c:if>
+
+
+                <c:if test="${favoriteState != 1}">
+                    <h1 class="spacing movietitle">MOVIE TITLE  <i id="favorite" class="fa fa-heart fa-inverse" aria-hidden="true"></i> </h1>
+                </c:if>
 
                 <ul class="spacing nav nav-pills">
-
-
                     <li class="active" role="presentation"><a href="/Danfango/movieinfopage.html"><h3>Overview</h3></a></li>
                     <li role="presentation"><a href="/Danfango/ticketselectpage.html"><h3>Movie Times + Tickets</h3></a></li>
                     <li role="presentation"><a href="/Danfango/movieinfopage.html"><h3>Synopsis</h3></a></li>
