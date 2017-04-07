@@ -250,9 +250,9 @@
 }
 
 #container{
-	background-color: lightgray;
+/*	background-color: lightgray;
+*/	background-image: url("images/grey4.jpg");
 }
-
 #navbottom{
     border-bottom-color: black;
     border-bottom-width: medium;

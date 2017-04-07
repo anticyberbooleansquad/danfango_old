@@ -119,7 +119,7 @@
 
             <div class="spacing container">
 
-                <h2 class="spacing movietitle padding">Movie <font color="EA6630"><b>Times Near Area</b><font></h2>
+                <h2 class="spacing movietitle padding">Movie Theatres & Times</h2>
 
                 <div class="spacing datepicker ll-skin-cangas"></div>
 

@@ -85,23 +85,25 @@
                                     <a href="/Danfango/movienews.html">Movie News</a>
                                 </li>
                                 <li>
-                                    <a href="/Danfango/signuppage.html">Danfango<font color="EA6630"><b>VIP</b><font></a>
-                                    <ul class="dropdown">
 
-                                        <c:if test="${isloggedin == 1}">
+                                    <c:if test="${isloggedin == 1}">
+                                        <a href="/Danfango/signuppage.html">DanfangoVIP(Welcome User!)</a>
+                                        <ul class="dropdown">
                                             <li><a href="/Danfango/logout.html">Sign-Out</a>
                                             </li>
                                         </c:if>
-                                            
+
 
                                         <c:if test="${isloggedin != 1}">
-                                            <li><a href="/Danfango/signuppage.html">Join Now</a>
-                                            </li>
-                                            <li><a href="/Danfango/signinpage.html">Sign-In</a>
-                                            </li>
-                                        </c:if>
+                                            <a href="/Danfango/signuppage.html">DanfangoVIP</a>
+                                            <ul class="dropdown">
+                                                <li><a href="/Danfango/signuppage.html">Join Now</a>
+                                                </li>
+                                                <li><a href="/Danfango/signinpage.html">Sign-In</a>
+                                                </li>
+                                            </c:if>
 
-                                    </ul>
+                                        </ul>
                                 </li>
 
                             </ul>

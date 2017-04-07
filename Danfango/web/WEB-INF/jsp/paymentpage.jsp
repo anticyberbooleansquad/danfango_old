@@ -85,7 +85,7 @@
                                     <a href="/Danfango/movienews.html">Movie News</a>
                                 </li>
                                 <li>
-                                    <a href="/Danfango/signuppage.html">Danfango<font color="EA6630"><b>VIP</b><font></a>
+                                    <a href="/Danfango/signuppage.html">DanfangoVIP</a>
                                     <ul class="dropdown">
 
                                         <c:if test="${isloggedin == 1}">
