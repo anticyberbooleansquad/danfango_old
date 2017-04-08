@@ -5,6 +5,7 @@
  */
 package Model;
 
+import java.io.Serializable;
 import javax.persistence.*;
 
 /**
@@ -12,7 +13,7 @@ import javax.persistence.*;
  * @author johnlegutko
  */
 @Entity
-public class User {
+public class User implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

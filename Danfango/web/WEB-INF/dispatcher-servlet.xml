@@ -23,6 +23,9 @@
     <!--<bean name="/test.html" class="com.danfango.TestController" />-->
     <context:component-scan base-package="Controllers"/>
     
+    <bean id="authenticationService" class="Services.AuthenticationService"/>
+    <bean id="memberService" class="Services.MemberService"/>
+    
     
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver"

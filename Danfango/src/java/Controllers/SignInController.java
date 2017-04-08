@@ -14,6 +14,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -22,7 +23,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class SignInController{
+    @Autowired
     AuthenticationService authenticationService; 
+    @Autowired
     MemberService memberService;
     
     @RequestMapping(value = "/signinpage")
@@ -34,26 +37,21 @@ public class SignInController{
     
     @RequestMapping(value = "/submitCredentials", method = RequestMethod.POST)
     protected ModelAndView submitCredentials(@RequestParam("email") String email, @RequestParam("password") String password, HttpServletRequest request){
-        ServletContext sc = request.getServletContext();
-        authenticationService = (AuthenticationService)sc.getAttribute("authenticationService");
-        memberService = (MemberService)sc.getAttribute("memberService");
-        
         ModelAndView modelandview;
         
         request.setAttribute("isloggedin", 1);
-        modelandview = new ModelAndView("index");
         
-//       boolean authenticated = authenticationService.authenticate(email, password);
-//       if(authenticated){
-//           User user = memberService.getUserByEmail(email);
-//           HttpSession session = request.getSession();
-//           session.setAttribute("user", user);
-//           modelandview = new ModelAndView("index");
-//       }
-//       else{
-//           modelandview = new ModelAndView("signinpage");
-//           modelandview.addObject("signinError", "Incorrect credentials entered. Please try again.");
-//       }       
+       boolean authenticated = authenticationService.authenticate(email, password);
+       if(authenticated){
+           User user = memberService.getUserByEmail(email);
+           HttpSession session = request.getSession();
+           session.setAttribute("user", user);
+           modelandview = new ModelAndView("index");
+       }
+       else{
+           modelandview = new ModelAndView("signinpage");
+           modelandview.addObject("signinError", "Incorrect credentials entered. Please try again.");
+       }       
         return modelandview;
     }
     

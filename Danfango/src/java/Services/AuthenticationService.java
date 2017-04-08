@@ -9,18 +9,18 @@ package Services;
 import Model.User;
 import java.security.MessageDigest;
 import java.util.Arrays;
-import javax.servlet.ServletContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 
 /**
  * 
  * @author Konrad Juszkiewicz <kjuszkiewicz95 at gmail.com>
  */
 @Service
-public class AuthenticationService {
-    @Autowired 
-    private ServletContext servletContext;
+public class AuthenticationService{
+    
+    @Autowired
     MemberService memberService;
     
     public AuthenticationService(){
@@ -29,12 +29,14 @@ public class AuthenticationService {
     
     public boolean authenticate(String email, String password){
         byte[] hashedPassword = hash(password);
-        memberService = (MemberService)servletContext.getAttribute("memberService");
         User user = memberService.getUserByEmail(email);
-        if(hashedPassword != null && user.getPassword() != null){
-            if(user.getPassword().equals(new String(hashedPassword))){
+        // if(hashedPassword != null && user.getPassword() != null){
+        // mocked true for now
+        if(true){
+            // if(user.getPassword().equals(new String(hashedPassword))){
+            // mocked true for now
                 return true;
-            }
+            // }
         }
         return false;
     }
