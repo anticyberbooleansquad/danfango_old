@@ -6,10 +6,10 @@
 package Services;
 
 import Model.Movie;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 /**
  *
  * @author charles
  */
-public interface MovieService extends JpaRepository<Movie, Integer> {  
+public interface MovieService extends CrudRepository<Movie, Integer> {  
 }
