@@ -8,4 +8,3 @@ $(function () {
         $(this).toggleClass('favoriteState');
     });
 });
-

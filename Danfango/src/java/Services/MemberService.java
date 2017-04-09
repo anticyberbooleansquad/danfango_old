@@ -25,7 +25,10 @@ public class MemberService {
     }
     
     public User getUserByEmail(String email){
-        return new User();
+        User u = new User();
+        u.setFirstName("John");
+        u.setLastName("Legutko");
+        return u;
     }
     
 }

@@ -20,6 +20,8 @@
         <link href="<c:url value="/resources/css/responsive.css"/>" rel="stylesheet">
         <link href="<c:url value="/resources/css/animate.css"/>" rel="stylesheet">
         <link href="<c:url value="/resources/css/colors/red.css"/>" rel="stylesheet">
+        <link href="<c:url value="/resources/css/datepicker.css"/>" rel="stylesheet">
+        <link href="<c:url value = "https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto" /> rel="stylesheet">
         <link href="<c:url value="/resources/css/mycss.css"/>" rel="stylesheet">
 
 
@@ -43,6 +45,8 @@
         <script src="<c:url value="/resources/js/jquery.slicknav.js" />"></script>
         <script src="<c:url value="/resources/js/jquery.themepunch.revolution.min.js" />"></script>
         <script src="<c:url value="/resources/js/jquery.themepunch.tools.min.js" />"></script>
+        <script src="<c:url value="/resources/js/myjs.js" />"></script>
+
 
         <!--[if IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
         <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -95,7 +99,7 @@
                                             <li><a href="/Danfango/logout.html">Sign-Out</a>
                                             </li>
                                         </c:if>
-                                            
+
 
                                         <c:if test="${isloggedin != 1}">
                                             <li><a href="/Danfango/signuppage.html">Join Now</a>
@@ -119,7 +123,9 @@
 
             <div class="spacing container">
 
-                <h2 class="spacing movietitle padding">Movie Theatres & Times</h2>
+                <h2 class="spacing movietitle padding">MOVIE THEATRES AND TIMES</h2>
+
+
 
                 <div class="spacing datepicker ll-skin-cangas"></div>
 
@@ -142,152 +148,96 @@
                         <img class="spacing movieposter" src="resources/images/movies/lbposter.jpg"/>
                     </div>
 
-                    <div class="col-sm-6">
-                        <div class="spacing card">
-                            <div class="card-header"></div>
-                            <div class="card-block">
-                                <h4 class="card-title">Movie Theatre Name</h4>
-                                <p class="card-text">Movie Theatre Address</p>
+
+                    <div class ="spacing col-sm-6">
+                        <div class="theatreTimes">
+                            <h4 class="theatreTimeCardsInfo">Movie Theatre Name</h4>
+                            <p class="theatreTimeCardsInfo">Movie Theatre Address</p>
+                            <div class="theatreTimeCardsTimes">
                                 <a href="/Danfango/checkoutpage.html" class="btn btn-primary">3:00PM</a>
                                 <a href="/Danfango/checkoutpage.html" class="btn btn-primary">5:00PM</a>
                                 <a href="/Danfango/checkoutpage.html" class="btn btn-primary">7:30PM</a>
                             </div>
                         </div>
-
-                        <div class="spacing card">
-                            <div class="card-header"></div>
-                            <div class="card-block">
-                                <h4 class="card-title">Movie Theatre Name</h4>
-                                <p class="card-text">Movie Theatre Address</p>
-                                <a href="/Danfango/checkoutpage.html" class="btn btn-primary">3:00PM</a>
-                                <a href="/Danfango/checkoutpage.html" class="btn btn-primary">5:00PM</a>
-                                <a href="/Danfango/checkoutpage.html" class="btn btn-primary">7:30PM</a>
-                            </div>
-                        </div>
-
-                        <div class="spacing card">
-                            <div class="card-header"></div>
-                            <div class="card-block">
-                                <h4 class="card-title">Movie Theatre Name</h4>
-                                <p class="card-text">Movie Theatre Address</p>
-                                <a href="/Danfango/checkoutpage.html" class="btn btn-primary">3:00PM</a>
-                                <a href="/Danfango/checkoutpage.html" class="btn btn-primary">5:00PM</a>
-                                <a href="/Danfango/checkoutpage.html" class="btn btn-primary">7:30PM</a>
-                            </div>
-                        </div>
-
-                        <div class="spacing card">
-                            <div class="card-header"></div>
-                            <div class="card-block">
-                                <h4 class="card-title">Movie Theatre Name</h4>
-                                <p class="card-text">Movie Theatre Address</p>
-                                <a href="/Danfango/checkoutpage.html" class="btn btn-primary">3:00PM</a>
-                                <a href="/Danfango/checkoutpage.html" class="btn btn-primary">5:00PM</a>
-                                <a href="/Danfango/checkoutpage.html" class="btn btn-primary">7:30PM</a>
-                            </div>
-                        </div>
-
-                        <div class="spacing card">
-                            <div class="card-header"></div>
-                            <div class="card-block">
-                                <h4 class="card-title">Movie Theatre Name</h4>
-                                <p class="card-text">Movie Theatre Address</p>
-                                <a href="/Danfango/checkoutpage.html" class="btn btn-primary">3:00PM</a>
-                                <a href="/Danfango/checkoutpage.html" class="btn btn-primary">5:00PM</a>
-                                <a href="/Danfango/checkoutpage.html" class="btn btn-primary">7:30PM</a>
-                            </div>
-                        </div>
-
-                        <div class="spacing card">
-                            <div class="card-header"></div>
-                            <div class="card-block">
-                                <h4 class="card-title">Movie Theatre Name</h4>
-                                <p class="card-text">Movie Theatre Address</p>
-                                <a href="/Danfango/checkoutpage.html" class="btn btn-primary">3:00PM</a>
-                                <a href="/Danfango/checkoutpage.html" class="btn btn-primary">5:00PM</a>
-                                <a href="/Danfango/checkoutpage.html" class="btn btn-primary">7:30PM</a>
-                            </div>
-                        </div>
-
-
                     </div>
-                </div>
 
-                <div class="col-sm-3"></div>
+                </div>
             </div>
 
+            <div class="col-sm-3"></div>
 
         </div>
+    </div>
 
 
 
 
-        <!-- Start Footer Section -->
-        <footer class="itemcenter">
-            <div class="container">
-                <div class="footer-widget social-widget">
-                    <h4>Anti-Graduation Squad</h4>
-                    <h6>ft. John Legutko, Joseph Giardina, Konrad Juszkiewicz, Charles Bendernagel</h6>
+    <!-- Start Footer Section -->
+    <footer class="itemcenter">
+        <div class="container">
+            <div class="footer-widget social-widget">
+                <h4>Anti-Graduation Squad</h4>
+                <h6>ft. John Legutko, Joseph Giardina, Konrad Juszkiewicz, Charles Bendernagel</h6>
 
-                    <h4>Follow Us<span class="head-line"></span></h4>
-                    <ul class="social-icons">
-                        <li>
-                            <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li>
-                            <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li>
-                            <a class="google" href="#"><i class="fa fa-google-plus"></i></a>
-                        </li>
-                        <li>
-                            <a class="instgram" href="#"><i class="fa fa-instagram"></i></a>
-                        </li>
-                    </ul>
+                <h4>Follow Us<span class="head-line"></span></h4>
+                <ul class="social-icons">
+                    <li>
+                        <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a class="google" href="#"><i class="fa fa-google-plus"></i></a>
+                    </li>
+                    <li>
+                        <a class="instgram" href="#"><i class="fa fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- .row -->
+            <!-- Start Copyright -->
+            <div class="copyright-section">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Copyright © 2016 Margo - Designed &amp; Developed by <a href="/Danfango/http://graygrids.com">GrayGrids</a></p>
+                    </div>
+                    <!-- .col-md-6 -->
+                    <div class="col-md-6">
+                        <ul class="footer-nav">
+                            <li><a href="/Danfango/#">Sitemap</a>
+                            </li>
+                            <li><a href="/Danfango/#">Privacy Policy</a>
+                            </li>
+                            <li><a href="/Danfango/#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- .col-md-6 -->
                 </div>
                 <!-- .row -->
-                <!-- Start Copyright -->
-                <div class="copyright-section">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>Copyright © 2016 Margo - Designed &amp; Developed by <a href="/Danfango/http://graygrids.com">GrayGrids</a></p>
-                        </div>
-                        <!-- .col-md-6 -->
-                        <div class="col-md-6">
-                            <ul class="footer-nav">
-                                <li><a href="/Danfango/#">Sitemap</a>
-                                </li>
-                                <li><a href="/Danfango/#">Privacy Policy</a>
-                                </li>
-                                <li><a href="/Danfango/#">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- .col-md-6 -->
-                    </div>
-                    <!-- .row -->
-                </div>
-                <!-- End Copyright -->
-
             </div>
-        </footer>
-        <!-- End Footer Section -->
+            <!-- End Copyright -->
 
-
-    </div>
-    <!-- End Full Body Container -->
-
-    <!-- Go To Top Link -->
-    <a href="/Danfango/#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-
-    <div id="loader">
-        <div class="spinner">
-            <div class="dot1"></div>
-            <div class="dot2"></div>
         </div>
-    </div>
+    </footer>
+    <!-- End Footer Section -->
 
-    <script src="<c:url value="/resources/js/script.js" />"></script>
+
+</div>
+<!-- End Full Body Container -->
+
+<!-- Go To Top Link -->
+<a href="/Danfango/#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+<div id="loader">
+    <div class="spinner">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+    </div>
+</div>
+
+<script src="<c:url value="/resources/js/script.js" />"></script>
 
 
 </body>

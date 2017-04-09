@@ -87,7 +87,7 @@
                                 <li>
 
                                     <c:if test="${isloggedin == 1}">
-                                        <a href="/Danfango/signuppage.html">DanfangoVIP(Welcome User!)</a>
+                                        <a href="/Danfango/signuppage.html">DanfangoVIP (Welcome ${user.firstName}!)</a>
                                         <ul class="dropdown">
                                             <li><a href="/Danfango/logout.html">Sign-Out</a>
                                             </li>

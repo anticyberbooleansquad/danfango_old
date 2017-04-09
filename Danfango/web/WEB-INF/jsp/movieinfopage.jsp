@@ -133,8 +133,6 @@
                     <li role="presentation"><a href="/Danfango/movieinfopage.html"><h3>Synopsis</h3></a></li>
                     <li role="presentation"><a href="/Danfango/movieinfopage.html"><h3>Movie Reviews</h3></a></li>
                     <li role="presentation"><a href="/Danfango/movietrailerpage.html"><h3>Trailers</h3></a></li>
-
-
                 </ul>
 
                 <div class="row">
